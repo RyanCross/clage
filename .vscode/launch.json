@@ -22,7 +22,7 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
 
-      "args": ["src/app.ts", "map", "--w", "--l", "--h"],
+      "args": ["src/app.ts", "map", "--w"],
 
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",

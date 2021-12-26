@@ -8,11 +8,11 @@ class MapProvider implements IMapProvider {
 
   getRandomMap(options: string[]): AoeIVMap {
     if (options.length === 0) {
-      return this.maps[getRandomInt(0, this.maps.length - 1)];
+      return this.maps[getRandomInt(0, this.maps.length)];
     }
 
     const filteredMaps = this.maps.filter((map) => options.includes(map.type));
-    return filteredMaps[getRandomInt(0, filteredMaps.length - 1)];
+    return filteredMaps[getRandomInt(0, filteredMaps.length)];
   }
 
   getRandomInt(min: number, max: number) {
@@ -34,15 +34,8 @@ function getRandomInt(min: number, max: number) {
   return randomNum; //The maximum is exclusive and the minimum is inclusive
 }
 
-// by default, all map types will be returned
-// three optional flags
-// -land -l - include land maps
-// -water -w - include water maps
-// -hybrid  - include hybrid maps
-// If a flag is provided, all other map types will be excluded.
-
 function main() {
-  let args = yargs(hideBin(process.argv))
+  yargs(hideBin(process.argv))
     .command(
       "map",
       "Returns a random map of any type. Or if optional flags are provided, maps of just those types.",
