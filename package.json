@@ -1,0 +1,19 @@
+{
+  "name": "clage",
+  "version": "1.0.0",
+  "description": "Simple CLI util for AOEIV Matchmaking with friends",
+  "main": "app.js",
+  "scripts": {
+    "start": "ts-node --nolazy -r ts-node/register/transpile-only",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.4",
+    "@types/yargs": "^17.0.8",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "yargs": "^17.3.1"
+  }
+}
